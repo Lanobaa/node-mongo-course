@@ -1,5 +1,5 @@
 {
-  "name": "mongodb-course",
+  "name": "node-mongodb-course",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
