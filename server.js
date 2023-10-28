@@ -9,6 +9,7 @@ const IndexRouter = require('./routes/index');
 const AuthorsRouter = require('./routes/authors');
 const BookRouter = require('./routes/books');
 const BodyParser = require('body-parser');
+const methodOverride = require('method-override');
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use(BodyParser.urlencoded({
   limit: '10mb',
   extended: false
 }));
+app.use(methodOverride('_method'));
 
 console.log('database..', process.env.DATABASE_URL)
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
